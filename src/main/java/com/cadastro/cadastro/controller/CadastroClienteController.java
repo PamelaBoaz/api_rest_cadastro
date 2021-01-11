@@ -23,9 +23,9 @@ public class CadastroClienteController {
 	private CadastroClienteService cadastroClienteService;
 
 	@PostMapping
-	public ResponseEntity<CadastroCliente> Post(@RequestBody @Valid CadastroCliente cadastro) {
+	public ResponseEntity<CadastroCliente> post(@RequestBody @Valid CadastroCliente cadastro) {
 
-		CadastroCliente cliente = cadastroClienteService.Cadastro(cadastro);
+		CadastroCliente cliente = cadastroClienteService.cadastrar(cadastro);
 		if (cliente == null) {
 
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();

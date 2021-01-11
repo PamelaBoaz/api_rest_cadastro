@@ -14,7 +14,7 @@ public class CadastroClienteService {
 	@Autowired
 	private CadastroClienteRepository repository;
 
-	public CadastroCliente Cadastro(CadastroCliente cadastro) {
+	public CadastroCliente cadastrar(CadastroCliente cadastro) {
 		Optional<CadastroCliente> cpfExistente = repository.findByCpf(cadastro.getCpf());
 
 		Optional<CadastroCliente> emailExistente = repository.findByEmail(cadastro.getEmail());
